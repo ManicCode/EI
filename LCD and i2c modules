@@ -1,0 +1,49 @@
+ /*
+This is code for LCD1602 Display with I2C module.
+ 
+ * Permission granted to share this code given that this
+ * note is kept with the code.
+ * Disclaimer: this code is "AS IS" and for educational purpose only.
+ * This library is based on work done by Manic.
+ */
+/*
+ *  This code has been modefied from the Arduino library
+ *  Updated by Manic on Jul 10, 2021 at 11:09
+ *  in E.C, P.E, SA
+ *  for ManicCode
+ *  
+ *  This is code for LCD1602 Display with I2C module
+ *  which can display text on the screen.
+ */
+#include <Wire.h> 
+#include <LiquidCrystal_I2C.h>
+
+// Set the LCD address to 0x27 for a 16 chars and 2 line display
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+void setup()
+{
+  // Manic code for LCD with I2C
+	// initialize the LCD, 
+	lcd.begin();
+ 
+	// Turn on the blacklight and print a message.
+	lcd.backlight();
+  // Manic code for LCD with I2C
+
+
+}
+
+void loop()
+{
+  
+  //start of loop Manic code for LCD with I2C
+  lcd.clear();
+  lcd.print("Manic");
+  lcd.setCursor (0,1); // go to start of 2nd line
+ lcd.print("Hello World!");
+  //lcd.print(millis() / 1000);
+  delay(500);
+ //end of loopcode Manic code for LCD with I2C
+}
+
